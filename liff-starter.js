@@ -169,7 +169,7 @@ function registerButtonHandlers() {
 				])
 					.then(function () {
 						window.alert(
-							"Ini adalah pesan dari fitur Send Message"
+							"Silahkan ditunggu pesanan anda"
 						);
 					})
 					.catch(function (error) {
