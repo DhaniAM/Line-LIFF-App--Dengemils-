@@ -81,37 +81,27 @@ function initializeLiff(myLiffId) {
  */
 function initializeApp() {
 	registerButtonHandlers();
-	getProfile();
-	// If on App
-	if (liff.isInClient()) {
+	getUserProfile();
+	// If on Web
+	if (liff.isLoggedIn()) {
 		document
-			.getElementById("login-menu")
+			.getElementById("external-browser")
 			.classList.toggle("hidden");
 		document
-			.getElementById("order-app")
+			.getElementById("liffLogoutButton")
 			.classList.toggle("hidden");
 	} else {
-		// If on Web
-		if (liff.isLoggedIn()) {
-			document
-				.getElementById("external-browser")
-				.classList.toggle("hidden");
-			document
-				.getElementById("liffLogoutButton")
-				.classList.toggle("hidden");
-		} else {
-			// not Log in on Web
-			document
-				.getElementById("login-menu")
-				.classList.toggle("hidden"); //show
-			document
-				.getElementById("order-app")
-				.classList.toggle("hidden"); //hidden
-		}
+		// not Log in on Web
+		document
+			.getElementById("login-menu")
+			.classList.toggle("hidden"); //show
+		document
+			.getElementById("order-app")
+			.classList.toggle("hidden"); //hidden
 	}
 }
 
-function getProfile() {
+function getUserProfile() {
 	liff.getProfile()
 		.then(profile => {
 			const name = profile.displayName;
