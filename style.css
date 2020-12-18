@@ -37,7 +37,6 @@
           align-items: center;
   -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  border: 1px solid black;
 }
 
 .menu li span:nth-child(4) {
@@ -46,7 +45,7 @@
   background-color: rgba(255, 255, 255, 0.671);
   line-height: 23px;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 10px;
 }
 
 .menu li span:nth-child(4):active {

@@ -32,7 +32,6 @@ $grey: #e9e9e9;
 		grid-template-columns: 5fr 5fr 5fr 1fr;
 		align-items: center;
 		transition: all 0.5s ease;
-		border: 1px solid black;
 
 		& span:nth-child(4) {
 			border-radius: 10px;
@@ -40,7 +39,7 @@ $grey: #e9e9e9;
 			background-color: rgba(255, 255, 255, 0.671);
 			line-height: 23px;
 			cursor: pointer;
-			margin-right: 5px;
+			margin-right: 10px;
 		}
 
 		& span:nth-child(4):active {
