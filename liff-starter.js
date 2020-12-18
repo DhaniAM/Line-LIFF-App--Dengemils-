@@ -82,22 +82,26 @@ function initializeLiff(myLiffId) {
 function initializeApp() {
 	registerButtonHandlers();
 	getUserProfile();
-	// If on Web
-	if (liff.isLoggedIn()) {
-		document
-			.getElementById("external-browser")
-			.classList.toggle("hidden");
-		document
-			.getElementById("liffLogoutButton")
-			.classList.toggle("hidden");
+	// If on App
+	if (liff.isInClient()) {
 	} else {
-		// not Log in on Web
-		document
-			.getElementById("login-menu")
-			.classList.toggle("hidden"); //show
-		document
-			.getElementById("order-app")
-			.classList.toggle("hidden"); //hidden
+		// If on Web
+		if (liff.isLoggedIn()) {
+			document
+				.getElementById("external-browser")
+				.classList.toggle("hidden"); //hidden
+			document
+				.getElementById("liffLogoutButton")
+				.classList.toggle("hidden"); //show
+		} else {
+			// not Log in on Web
+			document
+				.getElementById("login-menu")
+				.classList.toggle("hidden"); //show
+			document
+				.getElementById("order-app")
+				.classList.toggle("hidden"); //hidden
+		}
 	}
 }
 
