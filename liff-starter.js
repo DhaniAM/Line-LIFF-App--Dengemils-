@@ -94,12 +94,12 @@ function initializeApp() {
 	// If on Web
 	if (liff.isLoggedIn()) {
 		// Log in on Web
-		document
-			.getElementById("login-menu")
-			.classList.toggle("hidden");
-		document
-			.getElementById("order-app")
-			.classList.toggle("hidden");
+		// document
+		// 	.getElementById("login-menu")
+		// 	.classList.toggle("hidden");
+		// document
+		// 	.getElementById("order-app")
+		// 	.classList.toggle("hidden");
 		document
 			.getElementById("external-browser")
 			.classList.toggle("hidden");
@@ -110,10 +110,10 @@ function initializeApp() {
 		// not Log in on Web
 		document
 			.getElementById("login-menu")
-			.classList.toggle("hidden");
+			.classList.toggle("hidden"); //show
 		document
 			.getElementById("order-app")
-			.classList.toggle("hidden");
+			.classList.toggle("hidden"); //hidden
 	}
 }
 
