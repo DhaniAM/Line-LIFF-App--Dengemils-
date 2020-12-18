@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ordering Food</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://use.fontawesome.com/629cfb567f.js"></script>
+</head>
+<body>
+    <div id="order-app" class="">
+        <div class="container">
+            <div id="header">
+                <div class="user">
+                    <div class="user-img"></div>
+                    <div class="user-name">My Name</div>
+                </div>
+                <div class="app-name">Dengemils</div>
+            </div>
+            <div id="main">
+                <div id="food">
+                    <div class="content-header">Makanan</div>
+                    <ul class="food-menu menu">
+                        <li>
+                            <span>
+                                Serabi
+                            </span>
+                            <span>
+                                Rp 10000
+                            </span>
+                            <span>
+                                <button class="min" value="Serabi">-</button>
+                                <input type="text" value="0" data-action="Serabi" disabled>
+                                <button class="plus" value="Serabi">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Kimbap
+                            </span>
+                            <span>
+                                Rp 15000
+                            </span>
+                            <span>
+                                <button class="min" value="Kimbab">-</button>
+                                <input type="text" value="0" data-action="Kimbab" disabled>
+                                <button class="plus" value="Kimbab">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Dessert Box
+                            </span>
+                            <span>
+                                Rp 30000
+                            </span>
+                            <span>
+                                <button class="min" value="Dessert Box">-</button>
+                                <input type="text" value="0" data-action="Dessert Box" disabled>
+                                <button class="plus" value="Dessert Box">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Brownies
+                            </span>
+                            <span>
+                                Rp 40000
+                            </span>
+                            <span>
+                                <button class="min" value="Brownies">-</button>
+                                <input type="text" value="0" data-action="Brownies" disabled>
+                                <button class="plus" value="Brownies">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="drink">
+                    <div class="content-header">Minuman</div>
+                    <ul class="drink-menu menu">
+                        <li>
+                            <span>
+                                Jus Jeruk
+                            </span>
+                            <span>
+                                Rp 5000
+                            </span>
+                            <span>
+                                <button class="min" value="Jus Jeruk">-</button>
+                                <input type="text" value="0" disabled>
+                                <button class="plus" value="Jus Jeruk">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        <li>
+                            <span>
+                                Teh Es
+                            </span>
+                            <span>
+                                Rp 2000
+                            </span>
+                            <span>
+                                <button class="min" value="Teh Es">-</button>
+                                <input type="text" value="0" disabled>
+                                <button class="plus" value="Teh Es">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        <li>
+                            <span>
+                                Air Mineral
+                            </span>
+                            <span>
+                                Rp 1000
+                            </span>
+                            <span>
+                                <button class="min" value="Air Mineral">-</button>
+                                <input type="text" value="0" disabled>
+                                <button class="plus" value="Air Mineral">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Es Sirup
+                            </span>
+                            <span>
+                                Rp 4000
+                            </span>
+                            <span>
+                                <button class="min" value="Es Sirup">-</button>
+                                <input type="text" value="0" disabled>
+                                <button class="plus" value="Es Sirup">+</button>
+                            </span>
+                            <span class="iBtn">
+                                i
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div id="result">
+                    <div class="content-header">Pesanan anda</div>
+                    <div class="result-menu">
+
+                    </div>
+                    <div class="result-price">Rp 0</div>
+                    <div id="order">Order now</div>
+                </div>
+            </div>
+            <div id="modal">
+                <div class="md-wrap">
+                    <div class="md md-serabi"></div>
+                    <div class="md md-kimbap"></div>
+                    <div class="md md-dessert"></div>
+                    <div class="md md-brownies"></div>
+                    <div class="md md-jus"></div>
+                    <div class="md md-teh"></div>
+                    <div class="md md-air"></div>
+                    <div class="md md-sirup"></i></div>
+                    <i class="fa fa-times"></i>
+                </div>
+            </div>
+        </div>
+        <div id="footer">
+            <div id="liffLogoutButton" class="hidden">Log out</div>
+            <div id="external-browser">Open in external browser</div>
+        </div>
+
+
+        <!--Konten LIFF v2-->
+
+        <!-- LIFF ID ERROR -->
+        <div id="liffIdErrorMessage" class="hidden">
+            <p>You have not assigned any value for LIFF ID.</p>
+            <p>If you are running the app using Node.js, please set the LIFF ID as an environment variable in your
+                Heroku account follwing the below steps: </p>
+            <code id="code-block">
+                <ol>
+                    <li>Go to `Dashboard` in your Heroku account.</li>
+                    <li>Click on the app you just created.</li>
+                    <li>Click on `Settings` and toggle `Reveal Config Vars`.</li>
+                    <li>Set `MY_LIFF_ID` as the key and the LIFF ID as the value.</li>
+                    <li>Your app should be up and running. Enter the URL of your app in a web browser.</li>
+                </ol>
+            </code>
+            <p>If you are using any other platform, please add your LIFF ID in the <code>index.html</code> file.</p>
+            <p>For more information about how to add your LIFF ID, see <a
+                    href="https://developers.line.biz/en/reference/liff/#initialize-liff-app">Initializing the LIFF
+                    app</a>.</p>
+        </div>
+        <!-- LIFF INIT ERROR -->
+        <div id="liffInitErrorMessage" class="hidden">
+            <p>Something went wrong with LIFF initialization.</p>
+            <p>LIFF initialization can fail if a user clicks "Cancel" on the "Grant permission" screen, or if an error occurs in the process of <code>liff.init()</code>.
+        </div>
+        <!-- NODE.JS LIFF ID ERROR -->
+        <div id="nodeLiffIdErrorMessage" class="hidden">
+            <p>Unable to receive the LIFF ID as an environment variable.</p>
+        </div>
+    </div>
+
+    <!-- Login Menu -->
+    <div id="login-menu" class="hidden">
+        <p>Dengemils</p>
+        <p>You have not login, please login first to use the app</p>
+        <button id="liffLoginButton" class="btn btn-success btn-small">Log in</button>
+    </div>
+
+    <script src="app.js"></script>
+    <script src="liff-starter.js"></script>
+    <script src="https://static.line-scdn.net/liff/edge/2/sdk.js"></script>
+</body>
+</html>
