@@ -29,7 +29,7 @@ $grey: #e9e9e9;
 		width: 50%;
 		font-size: 20px;
 		display: grid;
-		grid-template-columns: 5fr 5fr 5fr 1fr;
+		grid-template-columns: 4fr 4fr 4fr 1fr;
 		align-items: center;
 		transition: all 0.5s ease;
 
@@ -39,7 +39,7 @@ $grey: #e9e9e9;
 			background-color: rgba(255, 255, 255, 0.671);
 			line-height: 23px;
 			cursor: pointer;
-			margin-right: 10px;
+			margin-right: 7px;
 		}
 
 		& span:nth-child(4):active {

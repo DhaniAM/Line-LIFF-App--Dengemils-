@@ -30,8 +30,8 @@
   font-size: 20px;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 5fr 5fr 5fr 1fr;
-      grid-template-columns: 5fr 5fr 5fr 1fr;
+  -ms-grid-columns: 4fr 4fr 4fr 1fr;
+      grid-template-columns: 4fr 4fr 4fr 1fr;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -45,7 +45,7 @@
   background-color: rgba(255, 255, 255, 0.671);
   line-height: 23px;
   cursor: pointer;
-  margin-right: 10px;
+  margin-right: 7px;
 }
 
 .menu li span:nth-child(4):active {
