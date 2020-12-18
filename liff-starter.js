@@ -90,30 +90,24 @@ function initializeApp() {
 		document
 			.getElementById("order-app")
 			.classList.toggle("hidden");
-	}
-	// If on Web
-	if (liff.isLoggedIn()) {
-		// Log in on Web
-		// document
-		// 	.getElementById("login-menu")
-		// 	.classList.toggle("hidden");
-		// document
-		// 	.getElementById("order-app")
-		// 	.classList.toggle("hidden");
-		document
-			.getElementById("external-browser")
-			.classList.toggle("hidden");
-		document
-			.getElementById("liffLogoutButton")
-			.classList.toggle("hidden");
 	} else {
-		// not Log in on Web
-		document
-			.getElementById("login-menu")
-			.classList.toggle("hidden"); //show
-		document
-			.getElementById("order-app")
-			.classList.toggle("hidden"); //hidden
+		// If on Web
+		if (liff.isLoggedIn()) {
+			document
+				.getElementById("external-browser")
+				.classList.toggle("hidden");
+			document
+				.getElementById("liffLogoutButton")
+				.classList.toggle("hidden");
+		} else {
+			// not Log in on Web
+			document
+				.getElementById("login-menu")
+				.classList.toggle("hidden"); //show
+			document
+				.getElementById("order-app")
+				.classList.toggle("hidden"); //hidden
+		}
 	}
 }
 
