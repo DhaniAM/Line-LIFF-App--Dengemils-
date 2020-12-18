@@ -183,6 +183,6 @@ function registerButtonHandlers() {
 
 function sendAlertIfNotInClient() {
 	alert(
-		"This button is unavailable as LIFF is currently being opened in an external browser."
+		"Can't order outside Line App, please use Line App."
 	);
 }
